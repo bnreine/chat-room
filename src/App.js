@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList';
 import MessageList from './components/MessageList';
@@ -47,15 +46,19 @@ class App extends Component {
       <div className="App">
         <Header user={this.state.user} firebase={firebase} setUser={(user) => this.setUser(user)}/>
 
-        <main>
-          <MessageList firebase={firebase} user={this.state.user} activeRoomRef={this.state.activeRoomRef} />
-        </main>
 
-        <aside>
-          <br/>
-          <h3>Click on a room to see messages</h3>
-          <RoomList firebase={firebase} activeRoomRef={this.state.activeRoomRef} handleRoomChange={(aKey) => this.handleRoomChange(aKey)} />
-        </aside>
+        <div id="mainWindow">
+          <aside id="aside">
+            <br/>
+            <h3>Click on a room to see messages</h3>
+            <RoomList firebase={firebase} activeRoomRef={this.state.activeRoomRef} handleRoomChange={(aKey) => this.handleRoomChange(aKey)} />
+          </aside>
+
+          <main id="main">
+            <MessageList firebase={firebase} user={this.state.user} activeRoomRef={this.state.activeRoomRef} />
+          </main>
+        </div>
+
       </div>
     );
   }
