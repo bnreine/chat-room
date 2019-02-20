@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
+//import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList';
 import MessageList from './components/MessageList';
-import User from './components/User';
+import Header from './components/Header';
 
 
 var config = {
@@ -45,10 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Chat Room</h1>
-          <User firebase={firebase} user={this.state.user} setUser={(user) => this.setUser(user)}/>
-        </header>
+        <Header user={this.state.user} firebase={firebase} setUser={(user) => this.setUser(user)}/>
 
         <main>
           <MessageList firebase={firebase} user={this.state.user} activeRoomRef={this.state.activeRoomRef} />

@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  border: solid 3px black;
+  background-color: red;
+}
+
+.header {
+  background-color: green;
+}
+
+#userAuthentication {
+  background-color: yellow;
+  max-width: 25%;
+  margin: auto;
+}
+
+.title {
+  color: black;
+  text-align: center;
+  background-color: blue;
+  max-width: 25%;
+  margin: auto;
+  padding: 10px;
+}
+
+#signIn {
+  background-color: purple;
+
+  font-weight: bold;
+  padding: 10px;
+  width: 50%;
+}
+
+#signOut {
+  background-color: purple;
+
+  font-weight: bold;
+  padding: 10px;
+  width: 50%;
+}
+
+#userName {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
